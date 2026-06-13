@@ -1,0 +1,724 @@
+body{
+    background: #050505;
+}
+
+.fontcolor{
+    color: #ffffff;
+}
+
+
+.font-type{
+    color: #ffffff; /* 既存のコード */
+    
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    font-weight: 700; /* 「bold」と同じ、しっかりした太さだにゃ！ */
+}
+
+
+
+
+
+/* ==========================================
+   固定ヘッダーとスクロールアニメーションの設定
+   ========================================== */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* 他のコンテンツより手前に表示 */
+    background: rgba(5, 5, 5, 0.85); /* 背景（少し透ける黒。お好みで調整してください） */
+    backdrop-filter: blur(10px); /* 背景をぼかして高級感を出す設定 */
+    
+    /* 初期状態：画面の外（上側）に隠して透明にする */
+    transform: translateY(-100%);
+    opacity: 0;
+    
+    /* 上から下に降りてくるときのスムーズさ（0.4秒） */
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+/* 下スクロールした時にJavaScriptでこのクラスをつける（上から下へフェードイン） */
+header.is-show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* --- 既存の.header-innerの微調整（position: relativeを削除して固定に対応） --- */
+.header-inner {
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+.header-inner {
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; /* 縦方向の中央揃えも追加しておくと綺麗に見えます */
+    position: relative;
+}
+
+/* 追加：文字リンクのグループを横並びにする */
+.header-nav {
+    display: flex;
+    gap: 40px; /* HomeとNewsの間の余白（お好みで調整してください） */
+}
+
+.header-home{
+    font-size: 20px;
+    text-decoration: none; /* これを追加すると、リンクの下線が消えます */
+}
+
+.header-news{
+    font-size: 20px;
+    text-decoration: none; /* これを追加すると、リンクの下線が消えます */
+}
+
+.header-home:hover{
+    opacity: 0.7;
+}
+
+.header-news:hover{
+    opacity: 0.7;
+}
+
+.rogo4-1{
+    width: 10%;
+    height: auto;
+    display: block;
+}
+
+
+
+
+.home1-news{
+    width: 100%;
+    height: 120vh;
+    position: relative;
+}
+
+
+
+.home1{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.haikei{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%);
+
+}
+
+.rogo5{
+    width: 40%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+/*会社概要*/
+
+
+.home2{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    padding-top: 60px; /* 見出しの上の余白 */
+}
+
+.h1{
+    position: absolute;
+    top: 30%;
+    left:50%;
+    transform: translate(-50%);
+}
+
+.rogo4-2{
+    width: 30%;
+    height: auto;
+    position: absolute;
+    top: 67%;
+    left: 12%;
+
+}
+
+.kaisyamei1{
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    font-size: 4rem;
+}
+
+.gaiyou1{
+    position: absolute;
+    top: 73%;
+    left: 45%;
+    font-size: 1.3rem;
+    letter-spacing: 0.1em;
+}
+
+.view-more{
+    color: #00ddff;
+}
+
+.view-more:hover{
+    opacity: 0.7;
+}
+
+.view-more1{
+    position: absolute;
+    top: 85%;
+    left: 70%;
+}
+
+
+
+
+
+
+
+
+.kaisyamei1-1{
+    font-size: 3rem;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.rogo5-2{
+    width: 30%;
+    height: auto;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+}
+
+.gaiyou4{
+    position: absolute;
+    top: 20%;
+    left: 45%;
+    font-size: 1.6rem;
+     letter-spacing: 0.1em;
+}
+
+.gaiyou5{
+    position: absolute;
+    top: 40%;
+    left: 45%;
+    font-size: 1.6rem;
+     letter-spacing: 0.1em;
+}
+
+.gaiyou6{
+    position: absolute;
+    top: 70%;
+    left: 45%;
+    font-size: 1.6rem;
+     letter-spacing: 0.1em;
+}
+
+
+
+
+
+
+
+.home2-2{
+width: 100%;
+height: 120vh;
+position: relative;
+}
+
+
+.title1-1{
+    font-size: 3rem;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.cast1{
+    width: 30%;
+    height: auto;
+    position: absolute;
+    top: 15%;
+    left: 20%;
+}
+
+.cast2{
+    width: 20%;
+    height: auto;
+    position: absolute;
+    top: 25%;
+    left: 55%;
+}
+
+.sns-icon{
+    transition: opacity 0.3s;
+}
+
+.sns-icon:hover{
+    opacity: 0.7;
+}
+
+.sns-icon1{
+    width: 2%;
+    height: auto;
+}
+.sns-icon2{
+    width: 3.5%;
+    height: auto;
+}
+
+.x-icon1{
+    position: absolute;
+    top: 95%;
+    left: 31%;
+}
+
+.x-icon2{
+    position: absolute;
+    top: 95%;
+    left: 62%;
+}
+
+.tiktok-icon1{
+    position: absolute;
+    top: 94%;
+    left: 35%;
+}
+
+.tiktok-icon2{
+    position: absolute;
+    top: 94%;
+    left: 66%;
+}
+
+.cast-name1{
+    position: absolute;
+    top: 85%;
+    left: 31%;
+    font-size: 2rem;
+}
+
+.cast-name2{
+    position: absolute;
+    top: 85%;
+    left: 62%;
+    font-size: 2rem;
+    letter-spacing: 0.1em;
+}
+
+
+
+
+
+
+
+.home3{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    padding-top: 60px; /* 見出しの上の余白 */
+}
+
+.rogo8-1{
+    width: 25%;
+    height: auto;
+    position: absolute;
+    top: 20%;
+    left: 15%;
+}
+
+.kaisyamei2{
+    position: absolute;
+    top: 18%;
+    left: 45%;
+    font-size: 4rem;
+}
+
+.gaiyou2{
+    position: absolute;
+    top: 42%;
+    left: 45%;
+    font-size: 1.3rem;
+    letter-spacing: 0.1em;
+}
+
+.view-more2{
+    position: absolute;
+    top: 57%;
+    left: 70%;
+}
+
+
+
+
+
+
+
+
+
+.kaisyamei3-1{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 3rem;
+}
+
+.rogo8-2{
+    width: 25%;
+    height: auto;
+    position: absolute;
+    top: 40%;
+    left: 15%;
+}
+
+.gaiyou7{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    font-size: 1.6rem;
+    letter-spacing: 0.1em;
+    line-height: 1.8;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.home4{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    padding-top: 60px; /* 見出しの上の余白 */
+}
+
+.rogo9{
+    width: 25%;
+    height: auto;
+    position: absolute;
+    top: 15%;
+    left: 15%;
+}
+
+.kaisyamei3{
+    position: absolute;
+    top: 10%;
+    left: 45%;
+    font-size: 5rem;
+}
+
+.gaiyou3{
+    position: absolute;
+    top: 37%;
+    left: 45%;
+    font-size: 1.3rem;
+    letter-spacing: 0.1em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.title4-1{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 1.7rem;
+}
+
+
+/* 3つのセットを囲む親要素 */
+.image-gallery {
+  display: flex;
+          /* 子要素（3つのセット）を横並びに */
+  justify-content: center; /* 全体を中央寄せ */
+  gap: 20px;              /* セットとセットの間の隙間を20pxに */
+  width: 100%;
+  max-width: 1200px;
+  
+  /* 上に30%分（画面の高さ基準）の空白を開ける設定 */
+  margin-top: 30vh; 
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  
+  padding: 0 10px;
+}
+
+/* 画像と文字を包む1つのセットの枠（3等分にする設定） */
+.image-item {
+  flex: 1;
+  max-width: calc((100% - 40px) / 3); /* 隙間を引いて3等分 */
+  text-align: center;                 /* ★中の画像や文字をすべて中央寄せにする */
+}
+
+/* 画像そのものの設定 */
+.image-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;                 /* 角を少し丸くする */
+}
+
+/* ★画像の下の文字（テキスト）の設定 */
+.image-text {
+  margin-top: 12px;       /* 画像と文字の間の隙間 */
+  font-size: 1.4rem;        /* 文字の大きさ */
+  color: #ffffff;         /* 文字の色（真っ黒より少し優しい黒） */
+  
+  /* これまでに解説した読みやすくする設定 */
+  line-height: 1.5;       /* 行間を1.5倍にして読みやすく */
+  letter-spacing: 0.05em; /* 字間を少し開けておしゃれに */
+}
+
+
+
+
+
+
+
+.image-link {
+  /* マウスカーソルを確実にポインター（手のひら）にする */
+  cursor: pointer; 
+  /* じわっと変わるアニメーション効果 */
+  transition: opacity 0.3s ease; 
+}
+
+/* 画像にカーソルが合わさった時（ホバー時）の処理 */
+.image-link:hover {
+  /* 画像の透明度を80%にして、暗く（または明るく）見せる */
+  opacity: 0.8; 
+}
+
+
+
+
+
+
+/* ==========================================
+   home5（金額説明セクション）のカスタムスタイル
+   ========================================== */
+
+/* 料金表全体のメインコンテナ（左右に空白を作る） */
+.home5 .container {
+    position: relative;
+  width: 100%;
+  max-width: 1000px;      /* 4つのカードが綺麗に収まるよう最大幅を調整 */
+  margin: 0 auto;         /* 全体を中央に寄せて左右均等に空白を確保 */
+  padding: 100px 30px;    /* 上下に100px、スマホ用の左右余白に30px */
+}
+
+/* 各カード共通（背景を少しだけ明るい黒にする） */
+.home5 .section, 
+.home5 .price-card, 
+.home5 .info-card {
+  background: #141414;     /* 暗めの背景 */
+  padding: 35px;
+  border-radius: 8px;
+  border: 1px solid #333333; /* 枠線を白（ダークグレー）に */
+  margin-bottom: 30px;
+  box-sizing: border-box;  /* 余白を含めたサイズ計算にする */
+}
+
+/* サービス内容 */
+.home5 .service-section {
+  text-align: center;
+  border-left: 4px solid #ffffff; /* 左側のアクセント線を白に */
+}
+
+.home5 .service-section h2,
+.home5 .price-card h2, 
+.home5 .info-card h2 {
+  font-size: 1.4rem;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+/* 2段組みレイアウト（上の段も下の段も全く同じ幅で揃える設定） */
+.home5 .pricing-grid, 
+.home5 .info-grid {
+  display: flex;
+  gap: 30px; /* カードとカードの間の空白 */
+  margin-bottom: 0px;
+  width: 100%;
+}
+
+/* 上下のカードがすべて同じ横幅の比率（50%ずつ）になるように固定 */
+.home5 .price-card,
+.home5 .info-card {
+  flex: 1; 
+  margin-bottom: 30px; 
+}
+
+.home5 .price-card h2, 
+.home5 .info-card h2 {
+  border-bottom: 2px solid #ffffff; /* 見出しの下線を白に */
+  padding-bottom: 12px;
+}
+
+/* 料金アイテムの個別調整 */
+.home5 .price-item {
+  border-bottom: 1px dashed #333333; /* アイテム間の区切り線を点線に */
+  padding: 18px 0;
+  text-align: left;
+}
+
+.home5 .price-item:last-child {
+  border-bottom: none;
+}
+
+.home5 .price-item h3 {
+  font-size: 1.1rem;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.home5 .price-amount,
+.home5 .price-detail {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #ffffff; /* 金額を白で目立たせる */
+}
+
+.home5 .price-detail {
+  font-size: 1.1rem;
+  font-weight: normal;
+  margin-bottom: 4px;
+}
+
+.home5 .price-note {
+  font-size: 0.9rem;
+  color: #888888;
+  margin-top: 6px;
+}
+
+/* オプション・その他 */
+.home5 .option-block {
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.home5 .option-block:last-child {
+  margin-bottom: 0;
+}
+
+.home5 .option-block h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+  border-left: 3px solid #ffffff;
+  padding-left: 8px;
+}
+
+.home5 .option-block p {
+  color: #cccccc;
+  font-size: 1rem;
+}
+
+.home5 .option-fee, 
+.home5 .strong-text {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #252525; /* 金額の部分にうっすら座布団を敷いて強調 */
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 4px;
+  margin-top: 8px;
+}
+
+.home5 .sub-note {
+  font-size: 0.9rem;
+  color: #888888;
+  margin-top: 4px;
+}
+
+/* フッターのスタイル調整 */
+.main-footer {
+  text-align: center;
+  padding: 40px 0;
+  color: #ffffff;
+  font-size: 0.9rem;
+  border-top: 1px solid #222222;
+}
+
+.title5-1{
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 1.7rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================
+   スクロールフェードイン用のアニメーション設定
+   ========================================== */
+
+/* 最初は透明で、30px下に下げておく */
+.home2, .home3, .home4, .home1-news, .home2-2 {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1.0s ease, transform 1.0s ease; /* 1秒かけてじわっと動く */
+}
+
+/* 画面内に入ったらこのクラスがJSで付与され、元の位置に戻りながら表示される */
+.home2.is-animated, 
+.home3.is-animated, 
+.home4.is-animated,
+.home1-news.is-animated,
+.home2-2.is-animated {
+    opacity: 1;
+    transform: translateY(0);
+}
